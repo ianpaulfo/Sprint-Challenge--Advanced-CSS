@@ -19,6 +19,19 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+      .blast {
+        width: 90%;
+        height: 25%;
+      }
+      .sky {
+        display: none;
+      }
+      .launch {
+        display: none;
+      }
+  }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -45,9 +58,15 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+  
+    @media @phone {
+      flex-direction: column-reverse;
+    }
     .walk-text {
       width: 50%;
+      @media @phone {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -57,14 +76,38 @@
         margin-bottom: 26px;
       }
 
+      .signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+      }
+
       .btn {
+        .custom-btn(black, white, 30%, 1.5vw);
+
+        @media @phone {
+          .custom-btn(black, white, 100%, 3vw);
+          padding: 25px;
+          border-radius: 5px;
+        }
+        }
+      .btn:hover {
+        background-color: white;
+        color: black;
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
+      @media @phone {
+        width: 100%;
+        heigh: auto;
+        margin-left: 0;
+        padding-bottom: 10px;
+      }
       img {
         width: 100%;
         height: auto;
@@ -72,4 +115,5 @@
       }
     }
   }
-}// home
+} 
+// home
